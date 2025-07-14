@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-...truncated..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- animation -->
+    <!-- <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" /> -->
+
+    <title>Ocean Cargo</title>
+  </head>
+  <body>
+    ƒ
+    <main>
+      <!-- Background Section -->
+      <!-- Background Video -->
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="../assets/vedio/bg_vedio.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <!-- Navigation -->
+      <header id="main-header">
+        <nav id="main-nav" class="nav-default" data-aos="fade-down">
+          <!-- Logo -->
+          <div class="flex items-center lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <img
+                src="../assets/images/LOGO.png"
+                alt="Ocean Cargo Logo"
+                class="h-10 w-auto"
+              />
+            </a>
+          </div>
+
+          <!-- Mobile toggle button -->
+          <div class="flex lg:hidden">
+            <button id="menu-toggle" class="text-white p-2.5">
+              <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+
+          <!-- Desktop Links -->
+          <ul
+            class="hidden lg:flex lg:gap-x-6 text-sm font-medium"
+            data-aos="fade-down"
+          >
+            <li>
+              <a
+                href="#"
+                class="group relative inline-block transition-transform duration-300 ease-in-out transform hover:scale-110"
+              >
+                About Us
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 ease-in-out group-hover:w-full"
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group relative inline-block transition-transform duration-300 ease-in-out transform hover:scale-110"
+              >
+                Services
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 ease-in-out group-hover:w-full"
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group relative inline-block transition-transform duration-300 ease-in-out transform hover:scale-110"
+              >
+                Companies
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 ease-in-out group-hover:w-full"
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group relative inline-block transition-transform duration-300 ease-in-out transform hover:scale-110"
+              >
+                Shipping
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 ease-in-out group-hover:w-full"
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group relative inline-block transition-transform duration-300 ease-in-out transform hover:scale-110"
+              >
+                Destinations
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 ease-in-out group-hover:w-full"
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="group relative inline-block transition-transform duration-300 ease-in-out transform hover:scale-110"
+              >
+                Countries
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 ease-in-out group-hover:w-full"
+                ></span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Desktop Contact Button -->
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="#"
+              class="bg-white text-[#0e1f41] px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              Contact Us
+            </a>
+          </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden mt-4 rounded-2xl bg-white/10 backdrop-blur-md p-6 text-white shadow-md transition-all duration-300 ease-in-out"
+        >
+          <div class="flex flex-col gap-4 text-sm font-medium">
+            <a
+              href="#"
+              class="group relative hover:text-[#c2d388] transition duration-300 ease-in-out"
+            >
+              About Us
+              <span
+                class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#"
+              class="group relative hover:text-[#c2d388] transition duration-300 ease-in-out"
+            >
+              Services
+              <span
+                class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#"
+              class="group relative hover:text-[#c2d388] transition duration-300 ease-in-out"
+            >
+              Companies
+              <span
+                class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#"
+              class="group relative hover:text-[#c2d388] transition duration-300 ease-in-out"
+            >
+              Shipping
+              <span
+                class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#"
+              class="group relative hover:text-[#c2d388] transition duration-300 ease-in-out"
+            >
+              Destinations
+              <span
+                class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#"
+              class="group relative hover:text-[#c2d388] transition duration-300 ease-in-out"
+            >
+              Countries
+              <span
+                class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+            <a
+              href="#"
+              class="mt-4 bg-white text-[#0e1f41] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300 transform hover:scale-105"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="relative h-screen overflow-hidden p-5">
+        <div class="flex items-center mt-10 md:mt-30">
+          <div
+            class="w-full max-w-7xl md:max-w-[85%] mx-auto px-6 lg:px-12 flex items-center"
+          >
+            <div class="text-white w-full">
+              <h1
+                class="text-5xl md:text-6xl font-bold leading-tight mb-4"
+                style="line-height: 1.2"
+                data-aos="fade-up"
+              >
+                Ship Your Cars Worldwide<br />
+                Reliable & Affordable
+              </h1>
+
+              <p
+                class="text-base text-gray-200 my-8"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                At Ocean Cargo, we keep your business moving and your cargo
+                on<br />
+                track with smooth, efficient, and cost-effective global shipping
+                services.
+              </p>
+
+              <div class="flex gap-4" data-aos="fade-up" data-aos-delay="200">
+                <a
+                  href="#"
+                  class="bg-[#c2d390] text-[#0e1f41] font-semibold px-6 py-3 rounded-full text-sm hover:bg-[#b3cb6f] transition duration-300"
+                >
+                  Get a Quote
+                </a>
+                <a
+                  href="#"
+                  class="border border-white text-white font-semibold px-6 py-3 rounded-full text-sm hover:bg-white hover:text-[#0e1f41] transition duration-300"
+                >
+                  Learn More
+                </a>
+              </div>
+
+              <!-- Third Row -->
+              <div
+                class="mt-20 w-full max-w-2xl md:max-w-[40%] bg-white/10 backdrop-blur-md text-white rounded-3xl shadow-lg p-4 flex items-center gap-4"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <!-- Left Image -->
+                <div class="flex-shrink-0">
+                  <img
+                    src="../assets/images/freightcar_1.jpg"
+                    alt="Client"
+                    class="w-36 h-36 rounded-3xl object-cover border-2 border-white"
+                  />
+                </div>
+
+                <!-- Right: Icons + Text -->
+                <div class="flex flex-col gap-2">
+                  <div class="flex gap-3">
+                    <img
+                      src="../assets/images/Hbg_1.jpg"
+                      alt="Brand 1"
+                      class="w-10 h-10 rounded-full object-cover border border-white"
+                    />
+                    <img
+                      src="../assets/images/Hbg_2.jpg"
+                      alt="Brand 2"
+                      class="w-10 h-10 rounded-full object-cover border border-white"
+                    />
+                    <img
+                      src="../assets/images/Hbg_4.jpg"
+                      alt="Brand 3"
+                      class="w-10 h-10 rounded-full object-cover border border-white"
+                    />
+                  </div>
+                  <p class="text-sm text-gray-200 leading-snug">
+                    Trusted by industry leaders <br />
+                    worldwide for secure & efficient shipping.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Section -->
+      <section class="pt-10 pb-20 bg-white text-center">
+        <!-- Header -->
+        <div class="mb-12 px-4 max-w-2xl mx-auto" data-aos="fade-right">
+          <h2 class="text-4xl md:text-6xl font-bold text-[#0e1f41] mb-4">
+            What We Offer
+          </h2>
+          <p class="text-gray-600 text-base leading-relaxed">
+            Peace Global Logistics provides a wide array of services tailored to
+            meet the diverse needs of both car wholesalers and retailers.
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto px-4"
+        >
+          <!-- Card 1: Towing -->
+          <div
+            class="group bg-white rounded-2xl shadow-xl overflow-hidden text-left transform transition duration-500 hover:shadow-2xl h-[480px] flex flex-col"
+          >
+            <div class="relative overflow-hidden h-72">
+              <img
+                src="../assets/images/towing.jpg"
+                alt="Towing Services"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-start">
+              <h3
+                class="text-2xl font-bold text-[#0e1f41] mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-truck-pickup text-[#c2d388] text-xl"></i>
+                Towing Services
+              </h3>
+              <p class="text-gray-600 text-sm">
+                We pride ourselves in providing the best dispatch service with
+                the least amount of wait time.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Loading -->
+          <div
+            class="group bg-white rounded-2xl shadow-xl overflow-hidden text-left transform transition duration-500 hover:shadow-2xl h-[480px] flex flex-col"
+          >
+            <div class="relative overflow-hidden h-72">
+              <img
+                src="../assets/images/loading_2.webp"
+                alt="Loading Services"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-start">
+              <h3
+                class="text-2xl font-bold text-[#0e1f41] mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-boxes-stacked text-[#c2d388] text-xl"></i>
+                Loading Services
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Having multiple protection layers from utilizing best materials,
+                we ensure that you have peace of mind of your shipment.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Shipping -->
+          <div
+            class="group bg-white rounded-2xl shadow-xl overflow-hidden text-left transform transition duration-500 hover:shadow-2xl h-[480px] flex flex-col"
+          >
+            <div class="relative overflow-hidden h-72">
+              <img
+                src="../assets/images/shipping_3.jpg"
+                alt="Shipping Services"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-start">
+              <h3
+                class="text-2xl font-bold text-[#0e1f41] mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-ship text-[#c2d388] text-xl"></i>
+                Shipping Services
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Our extensive network effortlessly connects your shipments to
+                destinations worldwide, providing truly global coverage for your
+                cargo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer SUCCESS -->
+      <section class="py-20 bg-white text-center">
+        <!-- Heading -->
+        <div class="mb-12 px-4 max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-extrabold text-[#0e1f41] mb-4">
+            CUSTOMER SUCCESS STORIES
+          </h2>
+          <p class="text-[#0e1f41] text-base leading-relaxed">
+            Peace Global Logistics is recognized as a leading entity in
+            high-volume car shipping from the USA, boasting a noteworthy record
+            of serving 1,316+ Worldwide.
+          </p>
+        </div>
+
+        <!-- Success Stats Grid -->
+        <div
+          class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto px-4 "
+        >
+      
+          <!-- Vehicles -->
+          <div class="flex flex-col items-center">
+            <i class="fas fa-car-side text-[36px] text-[#c2d388] mb-3"></i>
+            <h4 class="text-[#0e1f41] font-semibold text-lg">Vehicles</h4>
+            <p class="text-[#0e1f41] mt-1 text-sm">223,235+</p>
+          </div>
+
+          <!-- Shipments -->
+          <div class="flex flex-col items-center">
+            <i class="fas fa-box-open text-[36px] text-[#c2d388] mb-3"></i>
+            <h4 class="text-[#0e1f41] font-semibold text-lg">Shipments</h4>
+            <p class="text-[#0e1f41] mt-1 text-sm">54,203+</p>
+          </div>
+
+          <!-- Customers -->
+          <div class="flex flex-col items-center">
+            <i class="fas fa-users text-[36px] text-[#c2d388] mb-3"></i>
+            <h4 class="text-[#0e1f41] font-semibold text-lg">Customers</h4>
+            <p class="text-[#0e1f41] mt-1 text-sm">1,316+</p>
+          </div>
+
+          <!-- Destinations -->
+          <div class="flex flex-col items-center">
+            <i
+              class="fas fa-map-marker-alt text-[36px] text-[#c2d388] mb-3"
+            ></i>
+            <h4 class="text-[#0e1f41] font-semibold text-lg">Destinations</h4>
+            <p class="text-[#0e1f41] mt-1 text-sm">50+</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Ocean Cargo Section -->
+      <section class="w-full bg-white py-20">
+        <div class="w-full py-14 px-6">
+          <div
+            class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+          >
+            <!-- Left Column -->
+            <div
+              class="relative flex justify-center items-center"
+              data-aos="fade-right"
+            >
+              <div
+                class="absolute -right-15 -bottom-22 -rotate-90 origin-left -translate-x-[65%] bg-[#0e1f41] text-white px-5 py-4 rounded-md text-xl font-semibold shadow-md"
+              >
+                we provide
+                <span class="text-[#c2d388]">global logistics</span> solutions
+              </div>
+
+              <div
+                class="relative z-10 w-full h-[50vh] max-w-sm aspect-video rounded-xl overflow-hidden shadow-lg"
+              >
+                <img
+                  src="../assets/images/shipping_3.jpg"
+                  alt="Ocean Cargo service"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 flex items-center justify-center pointer-events-none"
+                >
+                  <button
+                    class="bg-[#c2d388] text-white w-14 h-14 rounded-full flex items-center justify-center text-xl shadow-lg opacity-90"
+                  >
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div
+                class="absolute z-20 -top-[60px] left-0 w-[220px] h-[220px] rounded-xl overflow-hidden border-6 border-white shadow-xl"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <img
+                  src="../assets/images/towing_2.jpeg"
+                  alt="Logistics Network"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div
+                class="absolute z-10 -bottom-[60px] right-[88px] w-[220px] h-[220px] rounded-xl overflow-hidden border-4 border-white shadow-xl"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <img
+                  src="../assets/images/Hbg_2.jpg"
+                  alt="Logistics Team"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <div
+                class="absolute w-[20rem] h-[10rem] rounded-3xl -bottom-14 border-2 border-[#c2d388]"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              ></div>
+            </div>
+
+            <!-- Right Column -->
+            <div data-aos="fade-left">
+              <p
+                class="text-[#0e1f41] font-medium flex items-center gap-2 text-sm mb-2"
+              >
+                <i class="fas fa-ship text-lg"></i> Trusted Global Freight
+                Services
+              </p>
+              <h2 class="text-5xl font-bold text-[#0e1f41] mb-4 leading-snug">
+                Personalized Logistics by
+                <span class="text-[#c2d388]">Ocean Cargo</span>
+              </h2>
+              <p class="text-sm text-gray-500 mb-6">
+                At Ocean Cargo, our mission has always been to provide
+                exceptional service with a personalized approach. We focus on
+                quality over quantity, valuing your time by handling all freight
+                arrangements efficiently.
+              </p>
+
+              <ul class="text-sm text-gray-700 space-y-4 mb-6">
+                <li
+                  class="flex items-start gap-3"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full bg-[#c2d388] flex items-center justify-center mt-0.5"
+                  >
+                    <i class="fas fa-check text-white text-xs"></i>
+                  </div>
+                  <span
+                    >Competitive pricing on global vehicle transportation.</span
+                  >
+                </li>
+                <li
+                  class="flex items-start gap-3"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full bg-[#c2d388] flex items-center justify-center mt-0.5"
+                  >
+                    <i class="fas fa-check text-white text-xs"></i>
+                  </div>
+                  <span>15+ years experience across 100+ countries.</span>
+                </li>
+              </ul>
+
+              <div
+                class="flex flex-wrap items-center gap-6 mt-10"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div class="flex items-center gap-2 text-sm text-gray-700">
+                  <i class="fas fa-phone text-lg text-[#0e1f41]"></i>
+                  <span>+1 (800) 123-4567</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it Works section -->
+      <section class="py-4 md:py-10 bg-white text-center">
+        <!-- Row 1: Logo -->
+
+        <!-- Top Row: Logo + Text Side-by-Side -->
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-6 md:px-20"
+        >
+          <!-- Left: Logo -->
+          <div class="flex-shrink-0" data-aos="fade-up">
+            <img
+              src="../assets/images/LOGO.png"
+              alt="PGL Logo"
+              class="w-[12rem] md:w-[15rem]"
+            />
+          </div>
+        </div>
+
+        <!-- Row 3: How It Works -->
+        <div class="mt-20 px-4 lg:px-20 max-w-7xl mx-auto text-left">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            <!-- Step-by-Step Timeline (Smaller Version) -->
+            <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
+              <!-- Step Item 1 -->
+              <div class="flex items-start gap-3">
+                <div
+                  class="bg-[#c2d388] text-white rounded-full p-2.5 flex-shrink-0"
+                >
+                  <i class="fas fa-gavel text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-[#0e1f41] mb-1">
+                    Auction Access
+                  </h4>
+                  <p class="text-gray-600 text-xs">
+                    We give you access to any online US Auctions
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step Item 2 -->
+              <div class="flex items-start gap-3">
+                <div
+                  class="bg-[#c2d388] text-white rounded-full p-2.5 flex-shrink-0"
+                >
+                  <i class="fas fa-car text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-[#0e1f41] mb-1">
+                    Purchase Vehicles
+                  </h4>
+                  <p class="text-gray-600 text-xs">
+                    Customer buys a car in Auction
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step Item 3 -->
+              <div class="flex items-start gap-3">
+                <div
+                  class="bg-[#c2d388] text-white rounded-full p-2.5 flex-shrink-0"
+                >
+                  <i class="fas fa-truck text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-[#0e1f41] mb-1">
+                    Loading Point Receives Vehicle
+                  </h4>
+                  <p class="text-gray-600 text-xs">
+                    PGL tows the vehicle to the nearest loading point
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step Item 4 -->
+              <div class="flex items-start gap-3">
+                <div
+                  class="bg-[#c2d388] text-white rounded-full p-2.5 flex-shrink-0"
+                >
+                  <i class="fas fa-search text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-[#0e1f41] mb-1">
+                    Inspect Vehicle and Notify
+                  </h4>
+                  <p class="text-gray-600 text-xs">
+                    Vehicle is inspected, photos are taken, customer is notified
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step Item 5 -->
+              <div class="flex items-start gap-3">
+                <div
+                  class="bg-[#c2d388] text-white rounded-full p-2.5 flex-shrink-0"
+                >
+                  <i class="fas fa-box-open text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-[#0e1f41] mb-1">
+                    Load Vehicle and Notify
+                  </h4>
+                  <p class="text-gray-600 text-xs">
+                    Vehicle is safely loaded in container, customer is notified
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step Item 6 -->
+              <div class="flex items-start gap-3">
+                <div
+                  class="bg-[#c2d388] text-white rounded-full p-2.5 flex-shrink-0"
+                >
+                  <i class="fas fa-warehouse text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-[#0e1f41] mb-1">
+                    Clear Container and Deliver
+                  </h4>
+                  <p class="text-gray-600 text-xs">
+                    Container is cleared and delivered to the customer’s
+                    warehouse
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Image with Experience Badge -->
+            <div class="relative" data-aos="fade-up" data-aos-delay="700">
+              <img
+                src="../assets/images/Icon_1.svg"
+                alt="Shipping Process"
+                class="w-full max-w-xl mx-auto rounded-xl shadow"
+              />
+              <!-- Overlay box (hidden on small screens) -->
+              <div
+                class="hidden md:flex absolute -bottom-30 -right-40 bg-[#0e1f41] text-white p-6 rounded-xl w-80 shadow-xl text-left"
+              >
+                <div class="flex items-start gap-4">
+                  <div class="bg-[#c2d388] p-3 rounded-full">
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-lg mb-1 leading-snug">
+                      8+ Years of Excellence
+                    </h3>
+                    <p class="text-sm text-gray-200">
+                      We've shipped over 223,208 vehicles globally, with a
+                      strong track record across the Middle East and beyond.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer section -->
+      <footer class="bg-[#0e1f41] text-gray-300 relative mt-10">
+        <!-- Scroll to top icon -->
+        <div
+          onclick="scrollToTop()"
+          class="absolute animate-bounce bottom-20 right-6 w-10 h-10 border-4 border-[#c2d388] bg-white rounded-full flex items-center justify-center cursor-pointer shadow-lg hover:bg-[#c2d388] transition"
+          title="Back to Top"
+          data-aos="fade-in"
+        >
+          <i class="fas fa-arrow-up text-[#0e1f41]"></i>
+        </div>
+
+        <!-- Subscribe Section -->
+        <div
+          class="container mx-auto w-[90%] py-10 flex flex-col md:flex-row items-center justify-between"
+          data-aos="fade-up"
+        >
+          <div class="mb-4 md:mb-0">
+            <h3 class="text-2xl font-bold text-white">
+              Subscribe To Our Newsletter
+            </h3>
+            <p class="text-sm text-gray-400">
+              Stay informed with the latest logistics updates
+            </p>
+          </div>
+          <div class="flex items-center text-sm">
+            <input
+              type="email"
+              placeholder="Enter Email"
+              class="rounded-full bg-white px-6 py-2 w-72 text-black focus:outline-none"
+            />
+            <button
+              class="bg-[#c2d388] text-white rounded-full px-4 py-2 flex items-center justify-center ml-2 hover:bg-[#b6ca6f]"
+            >
+              <i class="fas fa-paper-plane text-[#0e1f41]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Links Section -->
+        <div
+          class="container w-[90%] mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8"
+        >
+          <!-- Company Info -->
+          <div data-aos="fade-right">
+            <div class="flex items-center mb-2">
+              <img
+                src="../assets/images/LOGO.png"
+                alt="Ocean Cargo Logo"
+                class="w-10 h-10 mr-2"
+              />
+              <span class="font-bold text-[#c2d388] text-xl"
+                >OCEAN <span class="text-white">CARGO INC</span></span
+              >
+            </div>
+            <p class="text-sm text-gray-400">
+              Delivering excellence in global logistics and shipping. Trusted by
+              companies around the world.
+            </p>
+            <div class="flex space-x-6 mt-4">
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-gray-400 hover:text-white"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div data-aos="fade-up" data-aos-delay="100">
+            <h4 class="font-bold text-lg text-white mb-1">Quick Links</h4>
+            <div
+              class="w-18 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
+            ></div>
+            <ul class="space-y-1 text-sm">
+              <li class="text-gray-400">
+                <i class="fas fa-arrow-right mr-1"></i> About Us
+              </li>
+              <li class="text-gray-400">
+                <i class="fas fa-arrow-right mr-1"></i> Our Fleet
+              </li>
+              <li class="text-gray-400">
+                <i class="fas fa-arrow-right mr-1"></i> Destinations
+              </li>
+              <li class="text-gray-400">
+                <i class="fas fa-arrow-right mr-1"></i> Testimonials
+              </li>
+              <li class="text-gray-400">
+                <i class="fas fa-arrow-right mr-1"></i> Get A Quote
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h4 class="font-bold text-white mb-2">Our Services</h4>
+            <div
+              class="w-18 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
+            ></div>
+            <ul class="space-y-1 text-sm">
+              <li class="text-gray-400">
+                <i class="fas fa-arrow-right mr-1"></i> Vehicle Shipping
+              </li>
+              <li class="text-gray-400">
+                <i class="fas fa-arrow-right mr-1"></i> Ocean Freight
+              </li>
+              <li class="text-gray-400">
+                <i class="fas fa-arrow-right mr-1"></i> Air Freight
+              </li>
+              <li class="text-gray-400">
+                <i class="fas fa-arrow-right mr-1"></i> Warehouse Logistics
+              </li>
+              <li class="text-gray-400">
+                <i class="fas fa-arrow-right mr-1"></i> Customs Clearance
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div data-aos="fade-left" data-aos-delay="300">
+            <h4 class="font-bold text-white mb-2">Get In Touch</h4>
+            <div
+              class="w-18 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
+            ></div>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt text-[#c2d388] mr-2"></i>
+                <span class="text-gray-400"
+                  >123 Ocean Ave, Global Port, NY 10001</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt text-[#c2d388] mr-2"></i>
+                <span class="text-gray-400">+1 (800) 555-0199</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-[#c2d388] mr-2"></i>
+                <span class="text-gray-400">support@oceancargo.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div
+          class="container mx-auto px-4 py-4 mt-5 border-t border-[#c2d388]/30 flex flex-col md:flex-row justify-between items-center text-sm"
+          data-aos="fade-up"
+        >
+          <p>
+            © <span class="text-[#c2d388]">Ocean Cargo</span> Inc. All Rights
+            Reserved.
+          </p>
+          <div class="flex space-x-4 mt-2 md:mt-0 text-gray-400">
+            <a href="#" class="hover:underline">Terms & Conditions</a>
+            <a href="#" class="hover:underline">Privacy Policy</a>
+            <a href="#" class="hover:underline">Cookie Settings</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Toggle Menu Script -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // duration of animation in milliseconds
+        once: true, // animate only once when the element comes into view
+      });
+    </script>
+
+    <!-- button that takes as to the top -->
+    <script>
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+
+    <!-- Navdesign after scroll -->
+    <script>
+      window.addEventListener("scroll", function () {
+        const nav = document.getElementById("main-nav");
+        if (window.scrollY > 50) {
+          nav.classList.remove("nav-default");
+          nav.classList.add("nav-scrolled");
+        } else {
+          nav.classList.remove("nav-scrolled");
+          nav.classList.add("nav-default");
+        }
+      });
+    </script>
+  </body>
+</html>

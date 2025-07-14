@@ -1,0 +1,44 @@
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Initial navbar style */
+.nav-default {
+  display: flex;
+  margin: auto;
+  width: 95%;
+  max-width: 1280px;
+  margin-top: 1.25rem; /* mt-5 */
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 1rem 1.5rem; /* px-6 py-4 */ 
+  border-radius: 9999px; /* fully rounded */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Scrolled navbar style */
+.nav-scrolled {
+  display: flex;
+  width: 100%;
+  margin-top: 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e3ebc6;
+  color: #0e1f41;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
