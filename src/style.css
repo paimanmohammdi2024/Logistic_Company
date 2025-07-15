@@ -1,0 +1,97 @@
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Initial navbar style */
+.nav-default {
+  display: flex;
+  margin: auto;
+  width: 95%;
+  max-width: 1280px;
+  margin-top: 1.25rem; /* mt-5 */
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 1rem 1.5rem; /* px-6 py-4 */ 
+  border-radius: 9999px; /* fully rounded */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Scrolled navbar style */
+.nav-scrolled {
+  display: flex;
+  width: 100%;
+  margin-top: 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e3ebc6;
+  color: #0e1f41;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border-radius: 0; /* fully rounded */
+
+}
+
+/* LOADING */
+/* From Uiverse.io by AqFox - customized for Ocean Cargo */
+
+.spinner {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.spinner div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: spinner-4t3wzl 1.25s infinite backwards;
+}
+
+/* Alternate brand colors */
+.spinner div:nth-child(1) {
+  animation-delay: 0.15s;
+  background-color: #c2d388;
+}
+
+.spinner div:nth-child(2) {
+  animation-delay: 0.3s;
+  background-color: #216bff;
+}
+
+.spinner div:nth-child(3) {
+  animation-delay: 0.45s;
+  background-color: #c2d388;
+}
+
+.spinner div:nth-child(4) {
+  animation-delay: 0.6s;
+  background-color: #3c7dff;
+}
+
+.spinner div:nth-child(5) {
+  animation-delay: 0.75s;
+  background-color: #c2d388;
+}
+
+/* Animation */
+@keyframes spinner-4t3wzl {
+  0% {
+    transform: rotate(0deg) translateY(-200%);
+  }
+  60%, 100% {
+    transform: rotate(360deg) translateY(-200%);
+  }
+}
