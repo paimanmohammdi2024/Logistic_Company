@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
@@ -58,9 +57,7 @@
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
-    --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-    --animate-spin: spin 1s linear infinite;
     --animate-bounce: bounce 1s infinite;
     --blur-md: 12px;
     --aspect-video: 16 / 9;
@@ -315,6 +312,9 @@
   .my-8 {
     margin-block: calc(var(--spacing) * 8);
   }
+  .my-10 {
+    margin-block: calc(var(--spacing) * 10);
+  }
   .my-20 {
     margin-block: calc(var(--spacing) * 20);
   }
@@ -335,6 +335,9 @@
   }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
   }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
@@ -417,9 +420,6 @@
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
-  .h-8 {
-    height: calc(var(--spacing) * 8);
-  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -428,6 +428,9 @@
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
+  }
+  .h-24 {
+    height: calc(var(--spacing) * 24);
   }
   .h-36 {
     height: calc(var(--spacing) * 36);
@@ -456,9 +459,6 @@
   .h-\[100vh\] {
     height: 100vh;
   }
-  .h-\[150px\] {
-    height: 150px;
-  }
   .h-\[220px\] {
     height: 220px;
   }
@@ -477,6 +477,9 @@
   .min-h-\[300px\] {
     min-height: 300px;
   }
+  .min-h-screen {
+    min-height: 100vh;
+  }
   .w-0 {
     width: calc(var(--spacing) * 0);
   }
@@ -485,9 +488,6 @@
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
-  }
-  .w-8 {
-    width: calc(var(--spacing) * 8);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -527,9 +527,6 @@
   }
   .w-\[220px\] {
     width: 220px;
-  }
-  .w-\[250px\] {
-    width: 250px;
   }
   .w-auto {
     width: auto;
@@ -695,6 +692,13 @@
       margin-inline-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
+  .space-x-16 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 16) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 16) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
   .overflow-hidden {
     overflow: hidden;
   }
@@ -793,6 +797,12 @@
       background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
     }
   }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-center {
+    background-position: center;
+  }
   .object-contain {
     object-fit: contain;
   }
@@ -850,6 +860,9 @@
   .py-14 {
     padding-block: calc(var(--spacing) * 14);
   }
+  .py-15 {
+    padding-block: calc(var(--spacing) * 15);
+  }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
   }
@@ -873,6 +886,9 @@
   }
   .text-left {
     text-align: left;
+  }
+  .text-right {
+    text-align: right;
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -941,6 +957,9 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
   .text-\[\#0e1f41\] {
     color: #0e1f41;
   }
@@ -974,8 +993,14 @@
   .uppercase {
     text-transform: uppercase;
   }
+  .opacity-0 {
+    opacity: 0%;
+  }
   .opacity-90 {
     opacity: 90%;
+  }
+  .opacity-100 {
+    opacity: 100%;
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -1012,6 +1037,11 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .transition-transform {
     transition-property: transform, translate, scale, rotate;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -1024,6 +1054,10 @@
   .duration-500 {
     --tw-duration: 500ms;
     transition-duration: 500ms;
+  }
+  .duration-1000 {
+    --tw-duration: 1000ms;
+    transition-duration: 1000ms;
   }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
@@ -1211,6 +1245,21 @@
       width: 15rem;
     }
   }
+  .md\:w-\[30vh\] {
+    @media (width >= 48rem) {
+      width: 30vh;
+    }
+  }
+  .md\:w-\[50vh\] {
+    @media (width >= 48rem) {
+      width: 50vh;
+    }
+  }
+  .md\:w-\[60vh\] {
+    @media (width >= 48rem) {
+      width: 60vh;
+    }
+  }
   .md\:max-w-\[40\%\] {
     @media (width >= 48rem) {
       max-width: 40%;
@@ -1269,6 +1318,12 @@
   .md\:py-10 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:text-3xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
   .md\:text-5xl {
@@ -1505,11 +1560,6 @@
   syntax: "*";
   inherits: false;
   initial-value: 1;
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 @keyframes bounce {
   0%, 100% {

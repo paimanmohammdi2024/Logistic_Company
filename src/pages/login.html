@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-...truncated..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <title>Ocean Cargo</title>
+  </head>
+
+  <body>
+    <!-- Loader container -->
+    <div
+      id="page-loader"
+      class="fixed inset-0 bg-white z-[9999] flex items-center justify-center"
+    >
+      <div class="spinner relative w-16 h-16">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <main>
+      <!-- Background Section -->
+      <div
+        id="vanta-bg"
+        class="absolute top-0 left-0 w-full h-[100vh] -z-10"
+      ></div>
+
+      <!-- Contact Form -->
+      <section
+        class="py-16 px-6 md:px-10 min-h-screen flex items-center justify-center"
+        id="contact"
+        data-aos="fade-up"
+      >
+        <div
+          class="max-w-[80%] mx-auto bg-[#f9f9f9] rounded-3xl shadow-lg overflow-hidden flex flex-col md:flex-row"
+        >
+          <!-- Left: Form -->
+          <div class="w-full md:w-1/2 p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-[#0e1f41] mb-6">
+              Login
+            </h2>
+
+            <form class="space-y-5">
+            
+
+              <!-- Email -->
+              <div>
+                <label
+                  class="block text-[#0e1f41] font-semibold mb-1"
+                  for="email"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#c2d388]"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+
+              <!-- Password -->
+              <div>
+                <label
+                  class="block text-[#0e1f41] font-semibold mb-1"
+                  for="password"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  id="password"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#c2d388]"
+                  placeholder="Your password"
+                  required
+                />
+              </div>
+
+              <!-- Submit Button -->
+              <div class="text-left">
+                <button
+                  type="submit"
+                  class="bg-[#0e1f41] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300"
+                >
+                  Login
+                </button>
+              </div>
+            </form>
+
+            <!-- Back to Home Button -->
+            <div class="mt-6 text-left">
+              <a
+                href="index.html"
+                class="text-[#0e1f41] font-medium hover:underline hover:text-[#c2d388] transition"
+              >
+                ← Back to Home
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Image -->
+          <div
+            class="w-full md:w-[50vh] flex items-center justify-center bg-[#f9f9f9]"
+          >
+            <img
+              src="../assets/images/Login.svg"
+              alt="Login illustration"
+              class="w-[90%] h-auto object-contain"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Toggle Menu Script -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // duration of animation in milliseconds
+        once: true, // animate only once when the element comes into view
+      });
+    </script>
+
+    <!-- button that takes as to the top -->
+    <script>
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+
+    <!-- Navdesign after scroll -->
+    <script>
+      window.addEventListener("scroll", function () {
+        const nav = document.getElementById("main-nav");
+        if (window.scrollY > 50) {
+          nav.classList.remove("nav-default");
+          nav.classList.add("nav-scrolled");
+        } else {
+          nav.classList.remove("nav-scrolled");
+          nav.classList.add("nav-default");
+        }
+      });
+    </script>
+
+    <!-- Vanta.js + Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <script src="../assets/js/contactBg.js"></script>
+
+    <!-- loader -->
+    <script src="../assets/js/loader.js"></script>
+  </body>
+</html>
