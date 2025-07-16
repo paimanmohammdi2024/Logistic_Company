@@ -1,89 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../output.css" />
-    <link rel="stylesheet" href="../style.css" />
-    <!-- Font Awesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-...truncated..."
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
-    <!-- animation -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../output.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-...truncated..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Ocean Cargo</title>
-  </head>
+  <!-- animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-  <body>
-    <!-- Loader container -->
-    <div
-      id="page-loader"
-      class="fixed inset-0 bg-white z-[9999] flex items-center justify-center"
-    >
-      <div class="spinner relative w-16 h-16">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+  <title>Ocean Cargo</title>
+</head>
+
+<body>
+  <!-- Loader container -->
+  <div id="page-loader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
+    <div class="spinner relative w-16 h-16">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-    <main>
-      <!-- Background Section -->
-      <!-- Background Video -->
-      <!-- <img
+  </div>
+  <main>
+
+    <!-- Background Section -->
+    <!-- Background Video -->
+    <!-- <img
         src="../assets/images/background.jpg"
         alt="Background"
         class="absolute top-0 left-0 w-full h-full object-cover z-0"
       /> -->
-      <div class="absolute top-0 left-0 w-full h-full object-cover z-0"></div>
-      <!-- Navigation -->
-      <header id="main-header">
-        <script>
-          const navLinks = [
-            { name: "Home", href: "index.html" },
-            { name: "Services", href: "services.html" },
-            { name: "About Us", href: "aboutUs.html" },
-            { name: "Careers", href: "Careers.html" },
-            { name: "Contact Us", href: "contact.html" },
-          ];
-        </script>
+    <div class="absolute top-0 left-0 w-full h-full object-cover z-0"></div>
+    <!-- Navigation -->
+    <header id="main-header">
+      <script>
+        const navLinks = [
+          { name: "Home", href: "index.html" },
+          { name: "Services", href: "services.html" },
+          { name: "About Us", href: "aboutUs.html" },
+          { name: "Careers", href: "Careers.html" },
+          { name: "Contact Us", href: "contact.html" },
+        ];
+      </script>
 
-        <nav id="main-nav" class="nav-default" data-aos="fade-down">
-          <!-- Logo -->
-          <div class="flex items-center lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <img
-                src="../assets/images/LOGO.png"
-                alt="Ocean Cargo Logo"
-                class="h-10 w-auto"
-              />
-            </a>
-          </div>
+      <nav id="main-nav" class="nav-default" data-aos="fade-down">
+        <!-- Logo -->
+        <div class="flex items-center lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <img src="../assets/images/LOGO.png" alt="Ocean Cargo Logo" class="h-10 w-auto" />
+          </a>
+        </div>
 
-          <!-- Mobile toggle button -->
-          <div class="flex lg:hidden">
-            <button id="menu-toggle" class="text-black p-2.5">
-              <i id="menu-icon" class="fas fa-bars text-2xl"></i>
-            </button>
-          </div>
+        <!-- Mobile toggle button -->
+        <div class="flex lg:hidden">
+          <button id="menu-toggle" class="text-black p-2.5">
+            <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
 
-          <!-- Desktop Links -->
-          <ul
-            class="hidden lg:flex lg:gap-x-6 text-sm font-medium"
-            data-aos="fade-down"
-          >
-            <!-- Desktop Nav Items -->
-            <!-- Start loop -->
-            <script>
-              navLinks.forEach((link) => {
-                document.write(`
+        <!-- Desktop Links -->
+        <ul class="hidden lg:flex lg:gap-x-6 text-sm font-medium" data-aos="fade-down">
+          <!-- Desktop Nav Items -->
+          <!-- Start loop -->
+          <script>
+            navLinks.forEach((link) => {
+              document.write(`
             <li>
               <a href="${link.href}" class="group relative text-black inline-block transition-transform duration-300 ease-in-out transform hover:scale-110">
                 ${link.name}
@@ -91,296 +78,256 @@
               </a>
             </li>
           `);
-              });
-            </script>
-            <!-- End loop -->
-          </ul>
+            });
+          </script>
+          <!-- End loop -->
+        </ul>
 
-           <!-- Desktop Contact Button -->
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="login.html"
-              class="bg-[#c2d388] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300 ease-in-out transform hover:scale-105"
-            >
-              Login
-            </a>
-          </div>
-        </nav>
+        <!-- Desktop Contact Button -->
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="login.html"
+            class="bg-[#c2d388] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300 ease-in-out transform hover:scale-105">
+            Login
+          </a>
+        </div>
+      </nav>
 
-        <!-- Mobile Menu -->
-        <div
-          id="mobile-menu"
-          class="lg:hidden hidden mt-4 rounded-2xl bg-black/10 backdrop-blur-md p-6 text-black shadow-md transition-all duration-300 ease-in-out w-[90%] mx-auto"
-        >
-          <div class="flex flex-col gap-4 text-sm font-medium">
-            <!-- Mobile Nav Items -->
-            <script>
-              navLinks.forEach((link) => {
-                document.write(`
+      <!-- Mobile Menu -->
+      <div id="mobile-menu"
+        class="lg:hidden hidden mt-4 rounded-2xl bg-black/10 backdrop-blur-md p-6 text-black shadow-md transition-all duration-300 ease-in-out w-[90%] mx-auto">
+        <div class="flex flex-col gap-4 text-sm font-medium">
+          <!-- Mobile Nav Items -->
+          <script>
+            navLinks.forEach((link) => {
+              document.write(`
             <a href="${link.href}" class="group relative hover:text-[#c2d388] transition duration-300 ease-in-out">
               ${link.name}
               <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#c2d388] transition-all duration-300 group-hover:w-full"></span>
             </a>
           `);
-              });
-            </script>
+            });
+          </script>
 
-            <!-- Mobile Contact Button -->
-            <a
-              href="login.html"
-              class="mt-4 bg-white text-[#0e1f41] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300 transform hover:scale-105"
-            >
-              Login
-            </a>
-          </div>
+          <!-- Mobile Contact Button -->
+          <a href="login.html"
+            class="mt-4 bg-white text-[#0e1f41] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300 transform hover:scale-105">
+            Login
+          </a>
         </div>
-      </header>
-      <!-- Career Section -->
-      <section class="py-20">
-        <div
-          class="w-[70%] mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10"
-        >
-          <!-- Left Column -->
-          <div class="md:w-1/2">
-            <h2 class="text-4xl font-bold mb-4">Join Us</h2>
-            <h1 class="text-5xl font-extrabold text-[#c2d388] mb-6">
-              Careerly
-            </h1>
-            <p class="text-lg mb-6">
-              Work at the most dynamic agency & unlock your true potential.
-            </p>
-            <a
-              href="#"
-              class="inline-flex items-center px-6 py-3 border border-[#c2d388] text-[#c2d388] hover:bg-[#c2d388] hover:text-[#0e1f41] font-semibold rounded transition"
-            >
-              <i class="fas fa-briefcase mr-2"></i> View Openings
-            </a>
-          </div>
-
-          <!-- Right Column -->
-          <div class="md:w-1/2 flex justify-center">
-            <img
-              src="../assets/images/Carrer.svg"
-              alt="Career Illustration"
-              class="max-w-md w-full"
-            />
-            <!-- Replace 'your-image-path.svg' with actual image URL or path -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer section -->
-      <footer
-        class="bg-[#0e1f41] text-gray-300 relative mt-10"
-        data-aos="fade-up"
-      >
-        <!-- Scroll to top icon -->
-        <div
-          onclick="scrollToTop()"
-          class="absolute animate-bounce bottom-20 right-6 w-10 h-10 border-4 border-[#c2d388] bg-white rounded-full flex items-center justify-center cursor-pointer shadow-lg hover:bg-[#c2d388] transition"
-          title="Back to Top"
-        >
-          <i class="fas fa-arrow-up text-[#0e1f41]"></i>
-        </div>
-
-        <!-- Subscribe Section -->
-        <div
-          class="container mx-auto w-[90%] py-10 flex flex-col md:flex-row items-center justify-between"
-        >
-          <div class="mb-4 md:mb-0">
-            <h3 class="text-2xl font-bold text-white">
-              Subscribe To Our Newsletter
-            </h3>
-            <p class="text-sm text-gray-400">
-              Stay informed with the latest logistics updates
-            </p>
-          </div>
-          <div class="flex items-center text-sm">
-            <input
-              type="email"
-              placeholder="Enter Email"
-              class="rounded-full bg-white px-6 py-2 w-72 text-black focus:outline-none"
-            />
-            <button
-              class="bg-[#c2d388] text-white rounded-full px-4 py-2 flex items-center justify-center ml-2 hover:bg-[#b6ca6f]"
-            >
-              <i class="fas fa-paper-plane text-[#0e1f41]"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Links Section -->
-        <div
-          class="container w-[90%] mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8"
-        >
-          <!-- Company Info -->
-          <div>
-            <div class="flex items-center mb-2">
-              <img
-                src="../assets/images/LOGO.png"
-                alt="Ocean Cargo Logo"
-                class="w-10 h-10 mr-2"
-              />
-              <span class="font-bold text-[#c2d388] text-xl"
-                >OCEAN <span class="text-white">CARGO INC</span></span
-              >
-            </div>
-            <p class="text-sm text-gray-400">
-              Delivering excellence in global logistics and shipping. Trusted by
-              companies around the world.
-            </p>
-            <div class="flex space-x-6 mt-4">
-              <a href="#" class="text-gray-400 hover:text-white"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="text-gray-400 hover:text-white"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" class="text-gray-400 hover:text-white"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="#" class="text-gray-400 hover:text-white"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-
-          <!-- Quick Links -->
-          <div>
-            <h4 class="font-bold text-lg text-white mb-1">Quick Links</h4>
-            <div
-              class="w-18 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
-            ></div>
-            <ul class="space-y-1 text-sm">
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> About Us
-              </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Our Fleet
-              </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Destinations
-              </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Testimonials
-              </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Get A Quote
-              </li>
-            </ul>
-          </div>
-
-          <!-- Services -->
-          <div>
-            <h4 class="font-bold text-white mb-2">Our Services</h4>
-            <div
-              class="w-18 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
-            ></div>
-            <ul class="space-y-1 text-sm">
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Vehicle Shipping
-              </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Ocean Freight
-              </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Air Freight
-              </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Warehouse Logistics
-              </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Customs Clearance
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contact Info -->
-          <div>
-            <h4 class="font-bold text-white mb-2">Get In Touch</h4>
-            <div
-              class="w-18 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
-            ></div>
-            <ul class="space-y-3 text-sm">
-              <li class="flex items-start">
-                <i class="fas fa-map-marker-alt text-[#c2d388] mr-2"></i>
-                <span class="text-gray-400"
-                  >123 Ocean Ave, Global Port, NY 10001</span
-                >
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-phone-alt text-[#c2d388] mr-2"></i>
-                <span class="text-gray-400">+1 (800) 555-0199</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-envelope text-[#c2d388] mr-2"></i>
-                <span class="text-gray-400">support@oceancargo.com</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Copyright -->
-        <div
-          class="container mx-auto px-4 py-4 mt-5 border-t border-[#c2d388]/30 flex flex-col md:flex-row justify-between items-center text-sm"
-        >
-          <p>
-            © <span class="text-[#c2d388]">Ocean Cargo</span> Inc. All Rights
-            Reserved.
+      </div>
+    </header>
+    <!-- Career Section -->
+    <section class="py-20">
+      <div class="w-[70%] mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10">
+        <!-- Left Column -->
+        <div class="md:w-1/2">
+          <h2 class="text-4xl font-bold mb-4">Join Us</h2>
+          <h1 class="text-5xl font-extrabold text-[#c2d388] mb-6">
+            Careerly
+          </h1>
+          <p class="text-lg mb-6">
+            Work at the most dynamic agency & unlock your true potential.
           </p>
-          <div class="flex space-x-4 mt-2 md:mt-0 text-gray-400">
-            <a href="#" class="hover:underline">Terms & Conditions</a>
-            <a href="#" class="hover:underline">Privacy Policy</a>
-            <a href="#" class="hover:underline">Cookie Settings</a>
+          <a href="#"
+            class="inline-flex items-center px-6 py-3 border border-[#c2d388] text-[#c2d388] hover:bg-[#c2d388] hover:text-[#0e1f41] font-semibold rounded transition">
+            <i class="fas fa-briefcase mr-2"></i> View Openings
+          </a>
+        </div>
+
+        <!-- Right Column -->
+        <div class="md:w-1/2 flex justify-center">
+          <img src="../assets/images/Carrer.svg" alt="Career Illustration" class="max-w-md w-full" />
+          <!-- Replace 'your-image-path.svg' with actual image URL or path -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="bg-[#0e1f41] text-gray-300 relative mt-10" data-aos="fade-up">
+      <!-- Scroll to top icon -->
+      <div onclick="scrollToTop()"
+        class="absolute animate-bounce bottom-20 right-6 w-10 h-10 border-4 border-[#c2d388] bg-white rounded-full flex items-center justify-center cursor-pointer shadow-lg hover:bg-[#c2d388] transition"
+        title="Back to Top">
+        <i class="fas fa-arrow-up text-[#0e1f41]"></i>
+      </div>
+
+      <!-- Subscribe Section -->
+      <div class="container mx-auto w-[90%] py-10 flex flex-col md:flex-row items-center justify-between">
+        <div class="mb-4 md:mb-0">
+          <h3 class="text-2xl font-bold text-white">
+            Subscribe To Our Newsletter
+          </h3>
+          <p class="text-sm text-gray-400">
+            Stay informed with the latest logistics updates
+          </p>
+        </div>
+        <div class="flex items-center text-sm">
+          <input type="email" placeholder="Enter Email"
+            class="rounded-full bg-white px-6 py-2 w-72 text-black focus:outline-none" />
+          <button
+            class="bg-[#c2d388] text-white rounded-full px-4 py-2 flex items-center justify-center ml-2 hover:bg-[#b6ca6f]">
+            <i class="fas fa-paper-plane text-[#0e1f41]"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Footer Content -->
+      <div class="container w-[90%] mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-5 gap-8">
+        <!-- Company Info -->
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-2">
+            <img src="../assets/images/LOGO.png" alt="Ocean Cargo Logo" class="w-10 h-10 mr-2" />
+            <span class="font-bold text-[#c2d388] text-xl">OCEAN <span class="text-white">CARGO INC</span></span>
+          </div>
+          <p class="text-sm text-gray-400">
+            Delivering excellence in global logistics and shipping. Trusted by
+            companies around the world.
+          </p>
+          <div class="flex space-x-6 mt-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
-      </footer>
-    </main>
 
-    <!-- Toggle Menu Script -->
-    <script>
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
+        <!-- Management Information -->
+        <div>
+          <h4 class="font-bold text-lg text-white mb-2">Management Info</h4>
+          <div class="w-14 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"></div>
+          <ul class="text-sm space-y-2">
+            <li>
+              <i class="fas fa-user text-[#c2d388] mr-2"></i>CEO: Mohammad
+              Azizi
+            </li>
+            <li>
+              <i class="fas fa-user-tie text-[#c2d388] mr-2"></i>Manager:
+              Yaqoob Azizi
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt text-[#c2d388] mr-2"></i>11237
+              Philadelphia Rd, White Marsh, MD 21162
+            </li>
+          </ul>
+        </div>
 
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
+        <!-- Export Department -->
+        <div>
+          <h4 class="font-bold text-lg text-white mb-2">Export Department</h4>
+          <div class="w-14 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"></div>
+          <ul class="text-sm space-y-2">
+            <li>
+              <i class="fas fa-user text-[#c2d388] mr-2"></i>Yaqoob Azizi
+            </li>
+            <li>
+              <i class="fas fa-envelope text-[#c2d388] mr-2"></i>export@oceanshippingline.com
+            </li>
+            <li>
+              <i class="fas fa-phone text-[#c2d388] mr-2"></i>+1 (443)
+              707-8888
+            </li>
+          </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div>
+          <h4 class="font-bold text-lg text-white mb-2">Customer Service</h4>
+          <div class="w-14 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"></div>
+          <ul class="text-sm space-y-2">
+            <li>
+              <i class="fas fa-user text-[#c2d388] mr-2"></i>Mohammad Khalid
+            </li>
+            <li>
+              <i class="fas fa-envelope text-[#c2d388] mr-2"></i>info@oceanshippingline.com
+            </li>
+            <li>
+              <i class="fas fa-phone text-[#c2d388] mr-2"></i>+1 (443)
+              707-8888
+            </li>
+          </ul>
+        </div>
+
+        <!-- Opening Hours -->
+        <div>
+          <h4 class="font-bold text-lg text-white mb-2">Opening Hours</h4>
+          <div class="w-14 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"></div>
+          <ul class="text-sm space-y-2">
+            <li>
+              <i class="far fa-clock text-[#c2d388] mr-2"></i>Mon – Fri:
+              9:00am – 5:00pm
+            </li>
+            <li>
+              <i class="far fa-clock text-[#c2d388] mr-2"></i>Sat: 10:00am –
+              2:00pm
+            </li>
+            <li>
+              <i class="far fa-clock text-[#c2d388] mr-2"></i>Sun: Closed
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div
+        class="container mx-auto px-4 py-4 mt-5 border-t border-[#c2d388]/30 flex flex-col md:flex-row justify-between items-center text-sm">
+        <p>
+          © <span class="text-[#c2d388]">Ocean Cargo</span> Inc. All Rights
+          Reserved.
+        </p>
+        <div class="flex space-x-4 mt-2 md:mt-0 text-gray-400">
+          <a href="#" class="hover:underline">Terms & Conditions</a>
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Cookie Settings</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Toggle Menu Script -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // duration of animation in milliseconds
+      once: true, // animate only once when the element comes into view
+    });
+  </script>
+
+  <!-- button that takes as to the top -->
+  <script>
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
       });
-    </script>
+    }
+  </script>
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000, // duration of animation in milliseconds
-        once: true, // animate only once when the element comes into view
-      });
-    </script>
-
-    <!-- button that takes as to the top -->
-    <script>
-      function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
+  <!-- Navdesign after scroll -->
+  <script>
+    window.addEventListener("scroll", function () {
+      const nav = document.getElementById("main-nav");
+      if (window.scrollY > 50) {
+        nav.classList.remove("nav-default");
+        nav.classList.add("nav-scrolled");
+      } else {
+        nav.classList.remove("nav-scrolled");
+        nav.classList.add("nav-default");
       }
-    </script>
+    });
+  </script>
 
-    <!-- Navdesign after scroll -->
-    <script>
-      window.addEventListener("scroll", function () {
-        const nav = document.getElementById("main-nav");
-        if (window.scrollY > 50) {
-          nav.classList.remove("nav-default");
-          nav.classList.add("nav-scrolled");
-        } else {
-          nav.classList.remove("nav-scrolled");
-          nav.classList.add("nav-default");
-        }
-      });
-    </script>
+  <!-- loader -->
+  <script src="../assets/js/loader.js"></script>
+</body>
 
-    <!-- loader -->
-    <script src="../assets/js/loader.js"></script>
-  </body>
 </html>

@@ -19,10 +19,12 @@
 
     <title>Ocean Cargo</title>
   </head>
-   <!-- Loader container -->
+
+  <body>
+    <!-- Loader container -->
     <div
       id="page-loader"
-      class="fixed inset-0 flex items-center justify-center bg-white z-50"
+      class="fixed inset-0 bg-white z-[9999] flex items-center justify-center"
     >
       <div class="spinner relative w-16 h-16">
         <div></div>
@@ -32,31 +34,26 @@
         <div></div>
       </div>
     </div>
-  <body>
     <main>
       <!-- Background Section -->
-
+      <!-- Background Video -->
       <!-- <img
         src="../assets/images/background.jpg"
         alt="Background"
         class="absolute top-0 left-0 w-full h-full object-cover z-0"
       /> -->
-      <div
-        id="vanta-bg"
-        class="absolute top-0 left-0 w-full h-[100vh] -z-10"
-      ></div>
-
+      <div class="absolute top-0 left-0 w-full h-full object-cover z-0"></div>
       <!-- Navigation -->
       <header id="main-header">
-          <script>
-        const navLinks = [
-          { name: "Home", href: "index.html" },
-          { name: "Services", href: "services.html" },
-          { name: "About Us", href: "aboutUs.html" },
-          { name: "Careers", href: "Careers.html" }, 
-          { name: "Countries", href: "#" },
-        ];
-      </script>
+        <script>
+          const navLinks = [
+            { name: "Home", href: "index.html" },
+            { name: "Services", href: "services.html" },
+            { name: "About Us", href: "aboutUs.html" },
+            { name: "Careers", href: "Careers.html" },
+            { name: "Contact Us", href: "contact.html" },
+          ];
+        </script>
 
         <nav id="main-nav" class="nav-default" data-aos="fade-down">
           <!-- Logo -->
@@ -98,14 +95,13 @@
             </script>
             <!-- End loop -->
           </ul>
-
           <!-- Desktop Contact Button -->
           <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
-              href="contact.html"
+              href="login.html"
               class="bg-[#c2d388] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300 ease-in-out transform hover:scale-105"
             >
-              Contact Us
+              Login
             </a>
           </div>
         </nav>
@@ -130,167 +126,230 @@
 
             <!-- Mobile Contact Button -->
             <a
-              href="contact.html"
+              href="login.html"
               class="mt-4 bg-white text-[#0e1f41] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300 transform hover:scale-105"
             >
-              Contact Us
+              Login
             </a>
           </div>
         </div>
       </header>
 
-      <!-- Contact -->
-      <section class="pt-20 text-center" data-aos="fade-up">
-        <h2 class="text-5xl font-bold text-[#0e1f41] mb-10">Contact Us</h2>
-
-        <div
-          class="flex flex-col md:flex-row justify-center items-center gap-6 text-[#0e1f41] text-lg font-semibold"
-        >
-          <!-- Email -->
-          <div class="flex items-center gap-2">
-            <i class="fas fa-envelope text-[#c2d388] text-2xl"></i>
-            <a href="mailto:crm@peacegl.com" class="hover:underline"
-              >crm@peacegl.com</a
-            >
-          </div>
-
-          <!-- Phone -->
-          <div class="flex items-center gap-2">
-            <i class="fas fa-phone-alt text-[#c2d388] text-2xl"></i>
-            <a href="tel:+995511112860" class="hover:underline"
-              >+995 511 11 28 60</a
-            >
-          </div>
-
-          <!-- WhatsApp -->
-          <div class="flex items-center gap-2">
-            <i class="fab fa-whatsapp text-[#c2d388] text-2xl"></i>
-            <a
-              href="https://wa.me/18325299283"
-              target="_blank"
-              class="hover:underline"
-              >+1 (832) 529–9283</a
-            >
-          </div>
+      <!-- SERVICE -->
+      <section class="py-16 text-center relative" data-aos="zoom-in">
+        <!-- Title & Description -->
+        <div class="mb-10 max-w-2xl mx-auto px-4">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-[#0e1f41] mb-4">
+            Our Services
+          </h2>
+          <p class="text-[#0e1f41] text-base leading-relaxed">
+            At Peace Global Logistics, we specialize in delivering reliable and
+            tailored logistics services. From international sea shipping to
+            local auto towing and secure cargo loading, we ensure your goods
+            move safely and efficiently across every stage of the supply chain.
+          </p>
         </div>
-      </section>
 
-      <!-- Contact Form -->
-      <section class="py-10 px-6 md:px-10" id="contact" data-aos="fade-up">
+        <!-- Hero Image -->
         <div
-          class="max-w-[80%] mx-auto bg-[#f9f9f9] rounded-3xl shadow-lg overflow-hidden flex flex-col md:flex-row"
+          class="w-full h-[35vh] max-w-[90%] mx-auto rounded-xl overflow-hidden shadow-md mb-12"
         >
-          <!-- Left: Form -->
-          <div class="w-full md:w-1/2 p-8 md:p-12">
-            <h2 class="text-3xl font-bold text-[#0e1f41] mb-6">Get in Touch</h2>
-            <form class="space-y-5">
-              <!-- Two Columns -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Name -->
-                <div>
-                  <label
-                    class="block text-[#0e1f41] font-semibold mb-1"
-                    for="name"
-                    >Name</label
-                  >
-                  <input
-                    type="text"
-                    id="name"
-                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#c2d388]"
-                    placeholder="Your full name"
-                    required
-                  />
-                </div>
+          <img
+            src="../assets/images/Hbg_4.jpg"
+            alt="Logistics Team"
+            class="w-full h-full object-cover"
+          />
+        </div>
 
-                <!-- Email -->
-                <div>
-                  <label
-                    class="block text-[#0e1f41] font-semibold mb-1"
-                    for="email"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#c2d388]"
-                    placeholder="you@example.com"
-                    required
-                  />
-                </div>
-
-                <!-- Phone -->
-                <div>
-                  <label
-                    class="block text-[#0e1f41] font-semibold mb-1"
-                    for="phone"
-                    >Phone</label
-                  >
-                  <input
-                    type="tel"
-                    id="phone"
-                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#c2d388]"
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
-
-                <!-- Subject -->
-                <div>
-                  <label
-                    class="block text-[#0e1f41] font-semibold mb-1"
-                    for="subject"
-                    >Subject</label
-                  >
-                  <input
-                    type="text"
-                    id="subject"
-                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#c2d388]"
-                    placeholder="Shipping inquiry, quote request, etc."
-                  />
-                </div>
-              </div>
-
-              <!-- Message (Full Width) -->
-              <div>
-                <label
-                  class="block text-[#0e1f41] font-semibold mb-1"
-                  for="message"
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  rows="3"
-                  class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#c2d388]"
-                  placeholder="Write your message here..."
-                  required
-                ></textarea>
-              </div>
-
-              <!-- Button -->
-              <div class="text-left">
-                <button
-                  type="submit"
-                  class="bg-[#0e1f41] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300"
-                >
-                  Send Message
-                </button>
-              </div>
-            </form>
-          </div>
-          <!-- Right: Image -->
+        <!-- Service Cards -->
+        <div
+          class="relative z-10 flex flex-col md:flex-row justify-center items-center gap-6 px-4 max-w-7xl mx-auto -mt-40"
+        >
+          <!-- Card 1: Sea Shipping -->
           <div
-            class="w-full md:w-1/2 flex items-center justify-center bg-[#f9f9f9]"
+            class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm min-h-[300px] flex flex-col items-center hover:shadow-xl transition duration-300"
           >
-            <img
-              src="../assets/images/Contact_us.svg"
-              alt="Contact us"
-              class="w-[90%] h-auto object-contain"
-            />
+            <div
+              class="bg-[#c2d388] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4"
+            >
+              <i class="fas fa-ship"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-[#0e1f41] mb-2">
+              Sea Shipping
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Reliable sea freight solutions ensuring timely delivery of your
+              cargo across international ports.
+            </p>
+            <a
+              href="#"
+              class="text-[#0e1f41] font-bold text-sm hover:text-[#c2d388] transition"
+              >MORE</a
+            >
+          </div>
+
+          <!-- Card 2: Auto Towing -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm min-h-[300px] flex flex-col items-center hover:shadow-xl transition duration-300"
+          >
+            <div
+              class="bg-[#c2d388] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4"
+            >
+              <i class="fas fa-car-side"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-[#0e1f41] mb-2">
+              Auto Towing
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Fast and efficient auto towing services designed to safely
+              transport your vehicles from door to port.
+            </p>
+            <a
+              href="#"
+              class="text-[#0e1f41] font-bold text-sm hover:text-[#c2d388] transition"
+              >MORE</a
+            >
+          </div>
+
+          <!-- Card 3: Loading -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm min-h-[300px] flex flex-col items-center hover:shadow-xl transition duration-300"
+          >
+            <div
+              class="bg-[#c2d388] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4"
+            >
+              <i class="fas fa-dolly"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-[#0e1f41] mb-2">Loading</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Professional loading operations using top-grade materials to
+              protect your shipments during transit.
+            </p>
+            <a
+              href="#"
+              class="text-[#0e1f41] font-bold text-sm hover:text-[#c2d388] transition"
+              >MORE</a
+            >
           </div>
         </div>
       </section>
 
-        <!-- Footer section -->
-      <footer class="bg-[#0e1f41] text-gray-300 relative mt-10" data-aos="fade-up">
+      <!-- Why Choose Us -->
+      <section class="bg-white py-16 px-6 md:px-20" data-aos="fade-up">
+        <div class="text-center mb-14">
+          <h2 class="text-4xl font-bold text-[#0e1f41]">Why Choose Us</h2>
+          <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+            Galaxy Worldwide Shipping recognizes the importance of choosing a
+            reliable shipping partner for the secure transportation of your
+            valuable assets. Our commitment to excellence positions us as the
+            industry’s preferred choice.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <!-- Feature Card -->
+          <div
+            class="pl-4 border-l-4 border-[#c2d388] p-6 rounded-md hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+          >
+            <div class="text-[#c2d388] text-4xl mb-4">
+              <i class="fas fa-coins"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-[#0e1f41] mb-2">
+              Competitive Prices
+            </h3>
+            <p class="text-gray-600">
+              Get the best value for your money with our affordable,
+              quality-focused shipping solutions.
+            </p>
+          </div>
+
+          <!-- Feature Card -->
+          <div
+            class="pl-4 border-l-4 border-[#c2d388] p-6 rounded-md hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+          >
+            <div class="text-[#c2d388] text-4xl mb-4">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-[#0e1f41] mb-2">
+              Highly Secured Shipment
+            </h3>
+            <p class="text-gray-600">
+              Your goods are protected with industry-leading security from
+              pickup to delivery.
+            </p>
+          </div>
+
+          <!-- Feature Card -->
+          <div
+            class="pl-4 border-l-4 border-[#c2d388] p-6 rounded-md hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+          >
+            <div class="text-[#c2d388] text-4xl mb-4">
+              <i class="fas fa-hands-holding"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-[#0e1f41] mb-2">
+              White Glove Support
+            </h3>
+            <p class="text-gray-600">
+              We offer full transparency and care, ensuring a smooth and
+              trustworthy experience.
+            </p>
+          </div>
+
+          <!-- Feature Card -->
+          <div
+            class="pl-4 border-l-4 border-[#c2d388] p-6 rounded-md hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+          >
+            <div class="text-[#c2d388] text-4xl mb-4">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-[#0e1f41] mb-2">
+              100% Customer Satisfaction
+            </h3>
+            <p class="text-gray-600">
+              Our team ensures every client is happy with start-to-finish
+              service excellence.
+            </p>
+          </div>
+
+          <!-- Feature Card -->
+          <div
+            class="pl-4 border-l-4 border-[#c2d388] p-6 rounded-md hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+          >
+            <div class="text-[#c2d388] text-4xl mb-4">
+              <i class="fas fa-video"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-[#0e1f41] mb-2">
+              24/7 Monitored Warehouse
+            </h3>
+            <p class="text-gray-600">
+              Our facilities are always under surveillance to ensure the
+              security of your shipments.
+            </p>
+          </div>
+
+          <!-- Feature Card -->
+          <div
+            class="pl-4 border-l-4 border-[#c2d388] p-6 rounded-md hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+          >
+            <div class="text-[#c2d388] text-4xl mb-4">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-[#0e1f41] mb-2">
+              Global Network
+            </h3>
+            <p class="text-gray-600">
+              Our vast logistics network ensures you reach any
+              destination—quickly and reliably.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer section -->
+      <footer
+        class="bg-[#0e1f41] text-gray-300 relative mt-10"
+        data-aos="fade-up"
+      >
         <!-- Scroll to top icon -->
         <div
           onclick="scrollToTop()"
@@ -326,12 +385,12 @@
           </div>
         </div>
 
-        <!-- Links Section -->
+        <!-- Main Footer Content -->
         <div
-          class="container w-[90%] mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8"
+          class="container w-[90%] mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-5 gap-8"
         >
           <!-- Company Info -->
-          <div>
+          <div class="md:col-span-1">
             <div class="flex items-center mb-2">
               <img
                 src="../assets/images/LOGO.png"
@@ -362,76 +421,87 @@
             </div>
           </div>
 
-          <!-- Quick Links -->
+          <!-- Management Information -->
           <div>
-            <h4 class="font-bold text-lg text-white mb-1">Quick Links</h4>
+            <h4 class="font-bold text-lg text-white mb-2">Management Info</h4>
             <div
-              class="w-18 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
+              class="w-14 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
             ></div>
-            <ul class="space-y-1 text-sm">
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> About Us
+            <ul class="text-sm space-y-2">
+              <li>
+                <i class="fas fa-user text-[#c2d388] mr-2"></i>CEO: Mohammad
+                Azizi
               </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Our Fleet
+              <li>
+                <i class="fas fa-user-tie text-[#c2d388] mr-2"></i>Manager:
+                Yaqoob Azizi
               </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Destinations
-              </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Testimonials
-              </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Get A Quote
+              <li>
+                <i class="fas fa-map-marker-alt text-[#c2d388] mr-2"></i>11237
+                Philadelphia Rd, White Marsh, MD 21162
               </li>
             </ul>
           </div>
 
-          <!-- Services -->
+          <!-- Export Department -->
           <div>
-            <h4 class="font-bold text-white mb-2">Our Services</h4>
+            <h4 class="font-bold text-lg text-white mb-2">Export Department</h4>
             <div
-              class="w-18 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
+              class="w-14 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
             ></div>
-            <ul class="space-y-1 text-sm">
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Vehicle Shipping
+            <ul class="text-sm space-y-2">
+              <li>
+                <i class="fas fa-user text-[#c2d388] mr-2"></i>Yaqoob Azizi
               </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Ocean Freight
+              <li>
+                <i class="fas fa-envelope text-[#c2d388] mr-2"></i
+                >export@oceanshippingline.com
               </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Air Freight
-              </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Warehouse Logistics
-              </li>
-              <li class="text-gray-400">
-                <i class="fas fa-arrow-right mr-1"></i> Customs Clearance
+              <li>
+                <i class="fas fa-phone text-[#c2d388] mr-2"></i>+1 (443)
+                707-8888
               </li>
             </ul>
           </div>
 
-          <!-- Contact Info -->
+          <!-- Customer Service -->
           <div>
-            <h4 class="font-bold text-white mb-2">Get In Touch</h4>
+            <h4 class="font-bold text-lg text-white mb-2">Customer Service</h4>
             <div
-              class="w-18 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
+              class="w-14 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
             ></div>
-            <ul class="space-y-3 text-sm">
-              <li class="flex items-start">
-                <i class="fas fa-map-marker-alt text-[#c2d388] mr-2"></i>
-                <span class="text-gray-400"
-                  >123 Ocean Ave, Global Port, NY 10001</span
-                >
+            <ul class="text-sm space-y-2">
+              <li>
+                <i class="fas fa-user text-[#c2d388] mr-2"></i>Mohammad Khalid
               </li>
-              <li class="flex items-center">
-                <i class="fas fa-phone-alt text-[#c2d388] mr-2"></i>
-                <span class="text-gray-400">+1 (800) 555-0199</span>
+              <li>
+                <i class="fas fa-envelope text-[#c2d388] mr-2"></i
+                >info@oceanshippingline.com
               </li>
-              <li class="flex items-center">
-                <i class="fas fa-envelope text-[#c2d388] mr-2"></i>
-                <span class="text-gray-400">support@oceancargo.com</span>
+              <li>
+                <i class="fas fa-phone text-[#c2d388] mr-2"></i>+1 (443)
+                707-8888
+              </li>
+            </ul>
+          </div>
+
+          <!-- Opening Hours -->
+          <div>
+            <h4 class="font-bold text-lg text-white mb-2">Opening Hours</h4>
+            <div
+              class="w-14 h-[1px] border border-[#c2d388] border-dotted border-t-0 mb-4"
+            ></div>
+            <ul class="text-sm space-y-2">
+              <li>
+                <i class="far fa-clock text-[#c2d388] mr-2"></i>Mon – Fri:
+                9:00am – 5:00pm
+              </li>
+              <li>
+                <i class="far fa-clock text-[#c2d388] mr-2"></i>Sat: 10:00am –
+                2:00pm
+              </li>
+              <li>
+                <i class="far fa-clock text-[#c2d388] mr-2"></i>Sun: Closed
               </li>
             </ul>
           </div>
@@ -496,13 +566,6 @@
         }
       });
     </script>
-
-    <!-- Vanta.js + Three.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-
-    <script src="../assets/js/contactBg.js"></script>
-
 
     <!-- loader -->
     <script src="../assets/js/loader.js"></script>
