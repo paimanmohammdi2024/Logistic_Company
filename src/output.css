@@ -21,7 +21,6 @@
     --container-md: 28rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
-    --container-3xl: 48rem;
     --container-4xl: 56rem;
     --container-5xl: 64rem;
     --container-6xl: 72rem;
@@ -469,6 +468,9 @@
   .h-screen {
     height: 100vh;
   }
+  .max-h-20 {
+    max-height: calc(var(--spacing) * 20);
+  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -492,6 +494,9 @@
   }
   .w-36 {
     width: calc(var(--spacing) * 36);
+  }
+  .w-40 {
+    width: calc(var(--spacing) * 40);
   }
   .w-72 {
     width: calc(var(--spacing) * 72);
@@ -667,11 +672,11 @@
       margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
-  .space-x-6 {
+  .space-x-10 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 6) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-x-reverse)));
+      margin-inline-start: calc(calc(var(--spacing) * 10) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 10) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
   .space-x-16 {
@@ -704,6 +709,9 @@
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
+  }
+  .rounded-tr-2xl {
+    border-top-right-radius: var(--radius-2xl);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -749,6 +757,12 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .border-white\/20 {
+    border-color: color-mix(in srgb, #fff 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+    }
+  }
   .bg-\[\#0e1f41\] {
     background-color: #0e1f41;
   }
@@ -777,6 +791,18 @@
     background-color: color-mix(in srgb, #fff 10%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+    }
+  }
+  .bg-white\/20 {
+    background-color: color-mix(in srgb, #fff 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+    }
+  }
+  .bg-white\/30 {
+    background-color: color-mix(in srgb, #fff 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 30%, transparent);
     }
   }
   .bg-cover {
@@ -1089,6 +1115,13 @@
       }
     }
   }
+  .hover\:bg-\[\#b3c373\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #b3c373;
+      }
+    }
+  }
   .hover\:bg-\[\#b3cb6f\] {
     &:hover {
       @media (hover: hover) {
@@ -1117,6 +1150,16 @@
       }
     }
   }
+  .hover\:bg-white\/40 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in srgb, #fff 40%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--color-white) 40%, transparent);
+        }
+      }
+    }
+  }
   .hover\:text-\[\#0e1f41\] {
     &:hover {
       @media (hover: hover) {
@@ -1128,13 +1171,6 @@
     &:hover {
       @media (hover: hover) {
         color: #c2d388;
-      }
-    }
-  }
-  .hover\:text-white {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-white);
       }
     }
   }
@@ -1181,11 +1217,6 @@
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  .md\:col-span-1 {
-    @media (width >= 48rem) {
-      grid-column: span 1 / span 1;
     }
   }
   .md\:col-span-2 {
