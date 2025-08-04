@@ -29,23 +29,27 @@
   </div>
   <main>
     <!-- Background Section -->
-    <div id="vanta-bg" class="absolute top-0 left-0 w-full h-[100vh] -z-10"></div>
+    <img src="../assets/images/Hbg_1.jpg" alt="Background"
+      class="absolute top-0 left-0 w-full h-full object-cover z-0" />
+    <!-- Contact Form Section -->
+    <section
+      class="py-16 px-6 md:px-10 min-h-screen flex items-center justify-center bg-[url('/your-bg.jpg')] bg-cover bg-center"
+      id="contact">
+      <div
+        class="max-w-[80%] mx-auto bg-white/30 backdrop-blur-md rounded-3xl shadow-lg overflow-hidden flex flex-col md:flex-row">
 
-    <!-- Contact Form -->
-    <section class="py-16 px-6 md:px-10 min-h-screen flex items-center justify-center" id="contact" data-aos="fade-up">
-      <div class="max-w-[80%] mx-auto bg-[#f9f9f9] rounded-3xl shadow-lg overflow-hidden flex flex-col md:flex-row">
-        <!-- Left: Form -->
+        <!-- Left: Login Form -->
         <div class="w-full md:w-1/2 p-8 md:p-12">
-          <h2 class="text-3xl font-bold text-[#0e1f41] mb-6">
-            Login
+          <h2 class="text-3xl font-bold text-[#0e1f41] mb-6 flex items-center gap-2">
+                 Login
           </h2>
 
           <form class="space-y-5">
-
-
             <!-- Email -->
             <div>
-              <label class="block text-[#0e1f41] font-semibold mb-1" for="email">Email</label>
+              <label class="block text-[#0e1f41] font-semibold mb-1" for="email">
+                <i class="fas fa-envelope mr-2"></i>Email
+              </label>
               <input type="email" id="email"
                 class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#c2d388]"
                 placeholder="Enter your email" required />
@@ -53,22 +57,35 @@
 
             <!-- Password -->
             <div>
-              <label class="block text-[#0e1f41] font-semibold mb-1" for="password">Password</label>
+              <label class="block text-[#0e1f41] font-semibold mb-1" for="password">
+                <i class="fas fa-lock mr-2"></i>Password
+              </label>
               <input type="password" id="password"
                 class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#c2d388]"
                 placeholder="Your password" required />
             </div>
 
+            <!-- Remember Me and Forgot Password -->
+            <div class="flex items-center justify-between text-sm text-[#0e1f41]">
+              <label class="flex items-center">
+                <input type="checkbox" class="mr-2 accent-[#c2d388]" />
+                Remember Me
+              </label>
+              <a href="#" id="forgotPasswordLink" class="text-[#0e1f41] hover:text-[#c2d388] font-medium transition">
+                Forgot Password?
+              </a>
+            </div>
+
             <!-- Submit Button -->
             <div class="text-left">
               <button type="submit"
-                class="bg-[#0e1f41] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300">
-                Login
+                class="bg-[#0e1f41] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300 flex items-center gap-2">
+                  Login
               </button>
             </div>
           </form>
 
-          <!-- Back to Home Button -->
+          <!-- Back to Home -->
           <div class="mt-6 text-left">
             <a href="index.html" class="text-[#0e1f41] font-medium hover:underline hover:text-[#c2d388] transition">
               ← Back to Home
@@ -77,11 +94,34 @@
         </div>
 
         <!-- Right: Image -->
-        <div class="w-full md:w-[50vh] flex items-center justify-center bg-[#f9f9f9]">
+        <div class="w-full md:w-[50vh] flex items-center justify-center">
           <img src="../assets/images/Login.svg" alt="Login illustration" class="w-[90%] h-auto object-contain" />
         </div>
       </div>
     </section>
+
+    <!-- Modal for Forgot Password -->
+    <div id="forgotPasswordModal"
+      class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden justify-center items-center z-50">
+      <div class="bg-white rounded-xl shadow-xl max-w-md w-full p-6 relative text-center">
+        <!-- Close Button -->
+        <button id="closeModalBtn" class="absolute top-3 right-4 text-gray-600 hover:text-red-500 text-xl">
+          
+        </button>
+
+        <!-- Modal Content -->
+        <h3 class="text-2xl font-bold text-[#0e1f41] mb-4">Need Help?</h3>
+        <p class="text-gray-700 mb-6">
+          Can’t log in? Reach out to our admin and we’ll help you reset your password.
+        </p>
+
+        <!-- Contact Admin Button -->
+        <a href="mailto:admin@example.com?subject=Password Reset Request"
+          class="bg-[#0e1f41] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#c2d388] hover:text-[#0e1f41] transition duration-300 inline-flex items-center gap-2">
+          <i class="fas fa-envelope"></i> Contact Admin
+        </a>
+      </div>
+    </div>
   </main>
 
   <!-- Toggle Menu Script -->
@@ -127,11 +167,33 @@
     });
   </script>
 
-  <!-- Vanta.js + Three.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
-  <script src="../assets/js/contactBg.js"></script>
+  <!-- Forget Password  -->
+  <script>
+    const forgotPasswordLink = document.getElementById("forgotPasswordLink");
+    const forgotPasswordModal = document.getElementById("forgotPasswordModal");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+
+    forgotPasswordLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      forgotPasswordModal.classList.remove("hidden");
+      forgotPasswordModal.classList.add("flex");
+    });
+
+    closeModalBtn.addEventListener("click", function () {
+      forgotPasswordModal.classList.add("hidden");
+      forgotPasswordModal.classList.remove("flex");
+    });
+
+    // Optional: close on outside click
+    forgotPasswordModal.addEventListener("click", function (e) {
+      if (e.target === forgotPasswordModal) {
+        forgotPasswordModal.classList.add("hidden");
+        forgotPasswordModal.classList.remove("flex");
+      }
+    });
+  </script>
+
 
   <!-- loader -->
   <script src="../assets/js/loader.js"></script>

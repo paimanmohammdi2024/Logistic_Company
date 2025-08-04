@@ -17,6 +17,12 @@
 </head>
 
 <body>
+
+  <img src="../assets/images/aboutUS.jpeg" alt="Background"
+    class="absolute top-0 left-0 w-full h-[30vh] object-cover z-0" />
+
+
+
   <!-- Loader container -->
   <div id="page-loader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
     <div class="spinner relative w-16 h-16">
@@ -27,16 +33,9 @@
       <div></div>
     </div>
   </div>
-  <main class="bg-gray-50">
-
+  <main class="">
     <!-- Background Section -->
     <!-- Background Video -->
-    <!-- <img
-        src="../assets/images/background.jpg"
-        alt="Background"
-        class="absolute top-0 left-0 w-full h-full object-cover z-0"
-      /> -->
-    <div class="absolute top-0 left-0 w-full h-full object-cover z-0"></div>
     <!-- Navigation -->
     <header id="main-header">
       <script>
@@ -118,33 +117,95 @@
     </header>
 
     <!-- About Us -->
-    <section class=" py-20 px-6 md:px-20">
+    <section class="bg-blue-50 py-20 my-20 px-6 md:px-20 agency-font ">
       <!-- Row 1: Heading & Subtitle -->
-      <div class="text-center mb-12" data-aos="fade-up">
-        <p class="text-sm uppercase text-[#c2d388] font-bold mb-2">
-          About Us
-        </p>
-     
-         <p class="text-[#0e1f41] text-lg mt-4 max-w-[90%] mx-auto">
-      Since our company was established, our mission has been: Provide 
-      individual
-       approach to every customer Focus on quality, not quantity Value the time of 
-       each client by handling all freight arrangements on their behalf Set competitive 
-       prices for our services, our experienced team will assist you to open an account with Auctions Site (Copart, IAAI) and maintain. We will also advise you regarding vehicle export documentation understanding.
-With Ocean cargo you get a diverse team of professionals with more than 15 years of 
-experience in the logistics industry Ability to speak and communicate fluently in various 
-languages including English, Spanish, Arabic, Russian, Urdu and Pashto.
-Four Loading warehouses in Houston–TX, Savannah–GA, New York–NY and Los Angeles–CA
-Ocean cargo ships your vehicle to over 100 countries all over the world. We will deliver your 
-shipments seamlessly and with the utmost care and attention.
-We will store your vehicles in our warehouse for up to 30 days for free. We will Ship your vehicle 
-to your destination port without worrying about storage.
-        </p>
+      <div data-aos="fade-up">
+        <div class="bg-white/30 backdrop-blur-md py-12 px-6 md:px-16 max-w-[70%] mx-auto rounded-xl shadow-lg">
+
+          <h2 class="text-3xl md:text-4xl font-bold  text-center mb-6 text-white absolute -top-18 left-[45%]">
+            About Us
+          </h2>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">
+            Ocean Cargo: Specialized International Auto Shipping & Logistics
+          </h3>
+          <p class="text-gray-700 mb-6">
+            <strong>Your Trusted Partner for Global Vehicle Transport</strong><br />
+            With over 15 years of industry experience, Ocean Cargo is a
+            specialized provider of international vehicle shipping and
+            logistics services. We are built on personalized support,
+            uncompromising quality, and a commitment to efficiency,
+            professionalism, and client satisfaction.
+          </p>
+
+          <h4 class="text-lg font-semibold  mb-2">
+            Our Comprehensive Solutions:
+          </h4>
+
+          <div class="space-y-4 text-gray-700">
+            <div>
+              <strong>Auction Account Management:</strong>
+              <p>
+                Our multilingual team (English, Spanish, Arabic, Russian,
+                Urdu, Pashto) provides expert assistance in opening and
+                managing accounts with Copart, IAAI, and Manheim auctions.
+              </p>
+            </div>
+
+            <div>
+              <strong>Export Documentation Expertise:</strong>
+              <p>
+                Receive precise guidance on all vehicle export paperwork,
+                streamlining compliance and ensuring seamless customs
+                clearance.
+              </p>
+            </div>
+
+            <div>
+              <strong class="">Secure U.S. Operations:</strong>
+              <p class="text-gray-700">
+                Strategically located, secure loading facilities in key port
+                cities, staffed by our professional loading team who handle
+                every vehicle with care and efficiency:
+              </p>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-2 mt-3 text-gray-800 text-sm">
+                <span>• Baltimore, Maryland</span>
+                <span>• Savannah, Georgia</span>
+                <span>• Houston, Texas</span>
+                <span>• New York, New York</span>
+                <span>• Los Angeles, California</span>
+              </div>
+            </div>
+
+            <div>
+              <strong>Global Delivery Network:</strong>
+              <p>
+                Reliably shipping vehicles to destination ports in over 100
+                countries worldwide.
+              </p>
+            </div>
+
+            <div>
+              <strong>Added Client Value:</strong>
+              <p>
+                Benefit from up to 30 days of free, secure vehicle storage and
+                careful, timely delivery to your specified port.
+              </p>
+            </div>
+          </div>
+
+          <p class="mt-8 text-lg font-semibold text-blue-800">
+            Partner with Ocean Cargo for precision, reliability, and expertise
+            in global auto logistics
+          </p>
+          <p class="text-gray-700 mt-2 italic">
+            Experience the Ocean Cargo Advantage
+          </p>
+        </div>
       </div>
 
       <!-- Row 2: Hero Image -->
-      <div class="max-w-[90%] mx-auto mb-16" data-aos="zoom-in">
-        <img src="../assets/images/shipping.jpeg" alt="Team"
+      <div class="max-w-[90%] mx-auto mt-20 mb-10" data-aos="zoom-in">
+        <img src="{% static 'website/assets/images/shipping.jpeg' %}" alt="Team"
           class="rounded-3xl w-full object-cover shadow-lg h-[40vh]" />
       </div>
 
@@ -185,56 +246,56 @@ to your destination port without worrying about storage.
     <section>
       <!-- Row 4: Company Info -->
       <div class="max-w-7xl mx-auto my-20 px-6 md:px-10 grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
-
         <!-- Left Side: Branch Introduction Content -->
         <div>
-  <h3 class="text-3xl font-extrabold text-[#0e1f41] mb-6">
-    Introducing Our Branches
-  </h3>
-  <p class="text-[#0e1f41] text-base leading-relaxed mb-5">
-    Ocean Cargo proudly operates from multiple loading warehouses across the U.S., enabling smooth logistics and efficient shipping services for our clients.
-  </p>
+          <h3 class="text-3xl font-extrabold text-[#0e1f41] mb-6">
+            Our U.S. Branches
+          </h3>
+          <p class="text-[#0e1f41] text-base leading-relaxed mb-5">
+            Ocean Cargo proudly operates secure loading facilities in key
+            logistics hubs across the United States, ensuring efficient and
+            reliable service for our clients:
+          </p>
 
-  <div class="flex flex-wrap gap-y-4">
-    <div class="w-1/2 flex items-start text-[#0e1f41]">
-      <span class="text-[#c2d388] text-xl mr-3 mt-1">
-        <i class="fas fa-map-marker-alt"></i>
-      </span>
-      <span><strong>Houston, TX</strong></span>
-    </div>
-    <div class="w-1/2 flex items-start text-[#0e1f41]">
-      <span class="text-[#c2d388] text-xl mr-3 mt-1">
-        <i class="fas fa-map-marker-alt"></i>
-      </span>
-      <span><strong>Savannah, GA</strong></span>
-    </div>
-    <div class="w-1/2 flex items-start text-[#0e1f41]">
-      <span class="text-[#c2d388] text-xl mr-3 mt-1">
-        <i class="fas fa-map-marker-alt"></i>
-      </span>
-      <span><strong>New York, NY</strong></span>
-    </div>
-    <div class="w-1/2 flex items-start text-[#0e1f41]">
-      <span class="text-[#c2d388] text-xl mr-3 mt-1">
-        <i class="fas fa-map-marker-alt"></i>
-      </span>
-      <span><strong>Los Angeles, CA</strong></span>
-    </div>
-  </div>
+          <div class="flex flex-wrap gap-4">
+            <div class="w-1/2 flex items-start text-[#0e1f41] gap-2 mb-3">
+              <i class="fas fa-location-dot mt-1" style="color: #c2d388"></i>
+              <span><strong>Baltimore, MD</strong></span>
+            </div>
+            <div class="w-1/2 flex items-start text-[#0e1f41] gap-2 mb-3">
+              <i class="fas fa-location-dot mt-1" style="color: #c2d388"></i>
+              <span><strong>Savannah, GA</strong></span>
+            </div>
+            <div class="w-1/2 flex items-start text-[#0e1f41] gap-2 mb-3">
+              <i class="fas fa-location-dot mt-1" style="color: #c2d388"></i>
+              <span><strong>Houston, TX</strong></span>
+            </div>
+            <div class="w-1/2 flex items-start text-[#0e1f41] gap-2 mb-3">
+              <i class="fas fa-location-dot mt-1" style="color: #c2d388"></i>
+              <span><strong>New York, NY</strong></span>
+            </div>
+            <div class="w-1/2 flex items-start text-[#0e1f41] gap-2 mb-3">
+              <i class="fas fa-location-dot mt-1" style="color: #c2d388"></i>
+              <span><strong>Los Angeles, CA</strong></span>
+            </div>
+          </div>
 
-  <p class="text-[#0e1f41] text-base leading-relaxed mt-6">
-    Wherever you need us, our branches are ready to support your logistics needs with the same trusted service and care.
-  </p>
+          <p class="text-[#0e1f41] text-base leading-relaxed mt-6">
+            No matter where your shipment begins, our branches are ready to
+            support your logistics journey with professionalism, consistency,
+            and care.
+          </p>
         </div>
+
         <!-- Right Side: Image -->
         <div class="rounded-2xl overflow-hidden" data-aos="zoom-in">
-          <img src="../assets/images/Orange_truck_three.jpeg" alt="Ocean Cargo Team" class="w-full h-full object-cover" />
+          <img src="{% static 'website/assets/images/new about.jpg' %}" alt="Ocean Cargo Team"
+            class="w-full h-full object-cover" />
         </div>
       </div>
     </section>
 
-
-     <!-- Footer section -->
+    <!-- Footer section -->
     <footer class="bg-[#0e1f41] text-gray-300 relative mt-10" data-aos="fade-up">
       <!-- Scroll to top icon -->
       <div onclick="scrollToTop()"

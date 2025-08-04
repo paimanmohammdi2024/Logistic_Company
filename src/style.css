@@ -10,6 +10,15 @@ header {
   z-index: 50;
 }
 
+
+/* Add this in your global CSS file (e.g., styles.css or tailwind.css) */
+.agency-font {
+  font-family: 'Agency FB', sans-serif !important;
+}
+
+ 
+
+
 /* Initial navbar style */
 .nav-default {
   display: flex;
